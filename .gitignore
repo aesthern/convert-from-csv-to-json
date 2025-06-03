@@ -1,0 +1,10 @@
+/node_modules
+/dist
+/.env
+/.env.local
+/.DS_Store
+/.vscode
+
+# File name of input and output data
+/version2.csv
+/mapped.json
