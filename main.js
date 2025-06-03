@@ -4,7 +4,8 @@
  * Ensure you have the 'csvtojson' package installed: npm install csvtojson
  *
  */
-const csvFilePath = "version2.csv";
+const csvFilePath = "version2.csv"; // File path to the CSV file to be converted
+const outputFilePath = "mapped.json"; // Output file path for the JSON array
 const csv = require("csvtojson");
 const fs = require("fs");
 
@@ -17,7 +18,7 @@ convertToJsonArray()
   .then((jsonArray) => {
     console.log("Conversion completed.");
 
-    fs.writeFileSync("mapped.json", JSON.stringify(jsonArray, null, 2));
+    fs.writeFileSync(outputFilePath, JSON.stringify(jsonArray, null, 2));
     // return jsonArray;
   })
   .catch((error) => {
